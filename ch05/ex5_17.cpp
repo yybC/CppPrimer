@@ -11,12 +11,18 @@ int main()
     vector<int> vec2{0, 1, 1, 2, 3, 5, 8};
 
     auto size = vec1.size() < vec2.size() ? vec1.size() : vec2.size();
-    for (decltype(vec1.size()) i = 0; i != size; ++i) {
-        if (vec1[i] != vec2[i]) {
-            cout << "false" << endl;
-            return 0;
-        }
-    }
-    cout << "true" << endl;
+    decltype(iv1.size()) idx;
+	for (idx = 0; idx != size;++idx)
+	{
+		if (iv1[idx]!=iv2[idx])
+		{
+			cout << "no" << endl;
+			break;
+		}
+	}
+	if (idx==size)
+	{
+		cout << "yes" << endl;
+	}
     return 0;
 }
